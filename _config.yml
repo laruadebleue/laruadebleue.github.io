@@ -7,6 +7,13 @@ description: >-
 lang: fr
 timezone: Europe/Paris
 
+# Adresse publique du site (utilisée pour le plan du site envoyé à Google)
+url: https://laruadebleue.github.io
+
+# Génère automatiquement sitemap.xml, la liste des pages pour Google
+plugins:
+  - jekyll-sitemap
+
 # Adresse des articles : /2026/10/titre-de-l-article/
 permalink: /:year/:month/:title/
 
