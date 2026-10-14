@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+{% assign m = page.date | date: "%-m" | minus: 1 %}
+<article class="article">
+  <header class="article-head">
+    <p class="eyebrow">Saison 2026{% if page.semaine %} · Semaine {{ page.semaine }}{% endif %}</p>
+    <h1 class="article-title">{{ page.title }}</h1>
+    <p class="byline"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ mois[m] }} {{ page.date | date: "%Y" }}</time>{% if page.auteur %} · Écrit par {{ page.auteur }}{% endif %}</p>
+  </header>
+
+  {% if page.adversaire %}
+  {% if page.score_colts > page.score_adversaire %}{% assign resultat = "Victoire" %}{% assign classe = "victoire" %}{% elsif page.score_colts < page.score_adversaire %}{% assign resultat = "Défaite" %}{% assign classe = "defaite" %}{% else %}{% assign resultat = "Match nul" %}{% assign classe = "nul" %}{% endif %}
+  <section class="scoreboard" aria-label="Score final">
+    <div class="sb-head">
+      <span>Score final</span>
+      <span class="sb-result sb-{{ classe }}">{{ resultat }}</span>
+    </div>
+    {% if page.lieu == "domicile" %}
+    <div class="sb-row{% if page.score_adversaire > page.score_colts %} sb-winner{% endif %}"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.score_adversaire }}</span></div>
+    <div class="sb-row sb-colts{% if page.score_colts > page.score_adversaire %} sb-winner{% endif %}"><span class="sb-team">Colts</span><span class="sb-score">{{ page.score_colts }}</span></div>
+    {% else %}
+    <div class="sb-row sb-colts{% if page.score_colts > page.score_adversaire %} sb-winner{% endif %}"><span class="sb-team">Colts</span><span class="sb-score">{{ page.score_colts }}</span></div>
+    <div class="sb-row{% if page.score_adversaire > page.score_colts %} sb-winner{% endif %}"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.score_adversaire }}</span></div>
+    {% endif %}
+    <div class="sb-foot">
+      <span>{% if page.lieu == "domicile" %}À Indianapolis{% else %}À {{ page.ville }}{% endif %}</span>
+      {% if page.bilan %}<span>Bilan {{ page.bilan }}</span>{% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.chapeau %}<p class="chapeau">{{ page.chapeau }}</p>{% endif %}
+
+  <div class="prose">
+{{ content }}
+  </div>
+
+  <p class="back"><a href="{{ '/saison-2026/' | relative_url }}">← Tous les articles de la saison 2026</a></p>
+</article>

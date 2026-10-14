@@ -1,0 +1,16 @@
+# Réglages généraux du site La Ruade Bleue
+title: La Ruade Bleue
+tagline: Une communauté française de fans des Colts d'Indianapolis
+description: >-
+  Récits de matchs, infos et avis sur l'actualité des Indianapolis Colts.
+  Un site de fans francophones.
+lang: fr
+timezone: Europe/Paris
+
+# Adresse des articles : /2026/10/titre-de-l-article/
+permalink: /:year/:month/:title/
+
+markdown: kramdown
+
+exclude:
+  - README.md
