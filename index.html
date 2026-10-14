@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+<section class="intro">
+  <p class="intro-text">Les Colts d'Indianapolis racontés en français, avec pour seule ambition de partager des récits de matchs, des infos, des avis sur l'actualité de notre équipe préférée.</p>
+</section>
+
+<section class="list-section" aria-labelledby="derniers">
+  <h2 class="section-label" id="derniers">Derniers articles</h2>
+  <ol class="cards">
+    {% for post in site.posts limit: 10 %}
+    {% assign m = post.date | date: "%-m" | minus: 1 %}
+    <li class="card">
+      <a class="card-link" href="{{ post.url | relative_url }}">
+        <p class="eyebrow">{% if post.semaine %}Semaine {{ post.semaine }} · {% endif %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
+        <h3 class="card-title">{{ post.title }}</h3>
+        {% if post.adversaire %}
+        <p class="card-score"><span class="card-score-num">Colts {{ post.score_colts }} – {{ post.score_adversaire }} {{ post.adversaire }}</span>{% if post.score_colts > post.score_adversaire %}<span class="pill pill-victoire">Victoire</span>{% elsif post.score_colts < post.score_adversaire %}<span class="pill pill-defaite">Défaite</span>{% else %}<span class="pill pill-nul">Nul</span>{% endif %}</p>
+        {% endif %}
+        {% if post.chapeau %}<p class="card-chapeau">{{ post.chapeau }}</p>{% endif %}
+        <span class="card-more">Lire l'article →</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

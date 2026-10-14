@@ -1,0 +1,28 @@
+---
+layout: default
+title: Saison 2026
+permalink: /saison-2026/
+---
+{% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+<section class="page-head">
+  <p class="eyebrow">Rubrique</p>
+  <h1 class="page-title">Saison 2026</h1>
+  <p class="page-lede">Tous les récits de match de la saison, du plus récent au plus ancien.</p>
+</section>
+
+<ol class="cards">
+  {% for post in site.categories.saison %}
+  {% assign m = post.date | date: "%-m" | minus: 1 %}
+  <li class="card">
+    <a class="card-link" href="{{ post.url | relative_url }}">
+      <p class="eyebrow">{% if post.semaine %}Semaine {{ post.semaine }} · {% endif %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
+      <h3 class="card-title">{{ post.title }}</h3>
+      {% if post.adversaire %}
+      <p class="card-score"><span class="card-score-num">Colts {{ post.score_colts }} – {{ post.score_adversaire }} {{ post.adversaire }}</span>{% if post.score_colts > post.score_adversaire %}<span class="pill pill-victoire">Victoire</span>{% elsif post.score_colts < post.score_adversaire %}<span class="pill pill-defaite">Défaite</span>{% else %}<span class="pill pill-nul">Nul</span>{% endif %}</p>
+      {% endif %}
+      {% if post.chapeau %}<p class="card-chapeau">{{ post.chapeau }}</p>{% endif %}
+      <span class="card-more">Lire l'article →</span>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
