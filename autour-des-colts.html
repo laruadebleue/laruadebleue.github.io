@@ -1,0 +1,29 @@
+---
+layout: default
+title: Autour des Colts
+permalink: /autour-des-colts/
+---
+{% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+<section class="page-head">
+  <p class="eyebrow">Rubrique</p>
+  <h1 class="page-title">Autour des Colts</h1>
+  <p class="page-lede">Histoire, joueurs, coulisses et coups de sabots : tout ce qui fait la vie des Colts en dehors des previews ou des comptes rendus de match.</p>
+</section>
+
+{% if site.categories.autour %}
+<ol class="cards">
+  {% for post in site.categories.autour %}
+  {% assign m = post.date | date: "%-m" | minus: 1 %}
+  <li class="card">
+    <a class="card-link" href="{{ post.url | relative_url }}">
+      <p class="eyebrow">{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
+      <h3 class="card-title">{{ post.title }}</h3>
+      {% if post.chapeau %}<p class="card-chapeau">{{ post.chapeau }}</p>{% endif %}
+      <span class="card-more">Lire l'article →</span>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="empty">Les premiers articles arrivent bientôt.</p>
+{% endif %}
