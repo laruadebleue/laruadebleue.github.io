@@ -201,7 +201,15 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
   text-transform: uppercase;
   text-wrap: balance;
 }
-.page-lede { margin: 0; color: var(--muted); }
+.page-lede { margin: 0; max-width: var(--measure); color: var(--muted); }
+.empty {
+  margin: 0;
+  padding: 1.5rem;
+  border: 1px dashed var(--line);
+  border-radius: 4px;
+  color: var(--muted);
+  font-style: italic;
+}
 
 /* ---------- Cartes d'articles ---------- */
 .cards {
