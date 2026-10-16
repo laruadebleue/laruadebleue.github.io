@@ -5,12 +5,30 @@ layout: default
 {% assign m = page.date | date: "%-m" | minus: 1 %}
 <article class="article">
   <header class="article-head">
-    <p class="eyebrow">{% if page.categories contains 'autour' %}Autour des Colts{% else %}Saison 2026{% if page.semaine %} · Semaine {{ page.semaine }}{% endif %}{% endif %}</p>
+    <p class="eyebrow">{% if page.categories contains 'autour' %}Autour des Colts{% else %}Saison 2026{% if page.semaine %} · Semaine {{ page.semaine }}{% endif %}{% if page.type == "avant-match" %} · Avant-match{% endif %}{% endif %}</p>
     <h1 class="article-title">{{ page.title }}</h1>
-    <p class="byline"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ mois[m] }} {{ page.date | date: "%Y" }}</time>{% if page.auteur %} · Écrit par {{ page.auteur }}{% endif %}</p>
+    <p class="byline"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ mois[m] }} {{ page.date | date: "%Y" }}</time>{% if page.auteur %} · Par {{ page.auteur }}{% endif %}</p>
   </header>
 
-  {% if page.adversaire %}
+  {% if page.type == "avant-match" %}
+  <section class="scoreboard" aria-label="L'affiche">
+    <div class="sb-head">
+      <span>L'affiche</span>
+      {% if page.coup_envoi %}<span class="sb-result sb-avant">{{ page.coup_envoi }}</span>{% endif %}
+    </div>
+    {% if page.lieu == "domicile" %}
+    <div class="sb-row"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.bilan_adversaire }}</span></div>
+    <div class="sb-row sb-winner"><span class="sb-team">Colts</span><span class="sb-score">{{ page.bilan_colts }}</span></div>
+    {% else %}
+    <div class="sb-row sb-winner"><span class="sb-team">Colts</span><span class="sb-score">{{ page.bilan_colts }}</span></div>
+    <div class="sb-row"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.bilan_adversaire }}</span></div>
+    {% endif %}
+    <div class="sb-foot">
+      <span>{% if page.stade %}{{ page.stade }}{% elsif page.lieu == "domicile" %}À Indianapolis{% else %}À {{ page.ville }}{% endif %}</span>
+      {% if page.division %}<span>{{ page.division }}</span>{% endif %}
+    </div>
+  </section>
+  {% elsif page.adversaire %}
   {% if page.score_colts > page.score_adversaire %}{% assign resultat = "Victoire" %}{% assign classe = "victoire" %}{% elsif page.score_colts < page.score_adversaire %}{% assign resultat = "Défaite" %}{% assign classe = "defaite" %}{% else %}{% assign resultat = "Match nul" %}{% assign classe = "nul" %}{% endif %}
   <section class="scoreboard" aria-label="Score final">
     <div class="sb-head">
