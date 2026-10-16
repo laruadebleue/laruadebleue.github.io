@@ -266,6 +266,7 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .pill-victoire { background: var(--win); }
 .pill-defaite { background: var(--loss); }
 .pill-nul { background: var(--draw); }
+.pill-avant { background: var(--blue-text); }
 
 /* ---------- Article ---------- */
 .article { max-width: var(--measure); }
@@ -305,6 +306,7 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .sb-victoire { background: var(--win); }
 .sb-defaite { background: var(--loss); }
 .sb-nul { background: var(--draw); }
+.sb-avant { background: rgba(255, 255, 255, 0.14); }
 .sb-row {
   display: flex;
   justify-content: space-between;
@@ -318,16 +320,6 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .sb-team { font-size: 1.6rem; }
 .sb-score { font-size: 2.6rem; font-variant-numeric: tabular-nums; }
 .sb-winner { color: var(--board-ink); }
-.sb-colts .sb-team::before {
-  content: "";
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-right: 0.5rem;
-  vertical-align: 0.3rem;
-  background: var(--blue);
-  border-radius: 50%;
-}
 
 .chapeau {
   margin: 0 0 1.5rem;
