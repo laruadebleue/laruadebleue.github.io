@@ -30,6 +30,8 @@ Les textes publiés sur La Ruade Bleue sont la propriété de leur auteur. Merci
 
 ## Données personnelles
 
-Le site ne dépose aucun cookie et ne collecte aucune donnée personnelle. Comme pour tout site web, l'hébergeur (GitHub) et le service de polices de caractères (Google Fonts) peuvent enregistrer des données techniques de connexion, telles que l'adresse IP.
+Le site ne dépose aucun cookie. Pour connaître sa fréquentation, il utilise GoatCounter, un outil de mesure d'audience qui ne dépose pas de cookie et ne collecte aucune donnée permettant d'identifier les visiteurs. Les statistiques obtenues sont anonymes et réservées à l'éditeur du site.
+
+Comme pour tout site web, l'hébergeur (GitHub) et le service de polices de caractères (Google Fonts) peuvent enregistrer des données techniques de connexion, telles que l'adresse IP.
 
 </div>
