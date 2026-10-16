@@ -18,7 +18,7 @@ chapeau: "Les Titans débarquent à Indianapolis sans la moindre victoire et ave
 
 ## Le match
 
-Ce week-end le Lucas Oil Stadium accueille le deuxième match de division AFC Sud de la saison à la maison face aux Titans. Coup d'envoi dimanche à 19h (heure de chez nous), sur le premier créneau de la RedZone.
+Ce week-end le Lucas Oil Stadium accueille le deuxième match de division AFC Sud de la saison face aux Titans. Coup d'envoi dimanche à 19h (heure de chez nous), sur le premier créneau de la RedZone.
 
 Côté Colts, le début de saison ressemble à des montagnes russes. On a pris une claque d'entrée contre les Ravens, puis on est tombés 33-30 en prolongation à Kansas City sur un field goal à la dernière seconde. Derrière, deux victoires de suite : 19-17 contre Houston et 30-13 face aux Commanders à Londres. Avant de retomber à Pittsburgh : défaite 34-22, avec un seul touchdown, des interrogations, mais pas encore trop d'inquiétude quoi qu'on puisse en penser. Bilan : 2-3, et l'impression un peu collante que cette équipe vaut mieux que ça.
 
@@ -50,7 +50,7 @@ Côté infirmerie, plutôt une bonne nouvelle, même s'il ne faut pas se réjoui
 
 S'il y a un joueur qui peut faire basculer ce match, c'est notre TE à la chevelure dorée (plus belle que celle de l'Elfe des Jaguars !). Avec le départ de Pittman, Warren est devenu une cible prioritaire, et ça commence à se voir. Contre les Steelers, il a capté 7 ballons sur 9 pour 83 yards, avec un touchdown à la course en prime. Surtout, il a enfin été utilisé dans la profondeur : sa réception de 29 yards a presque doublé son plus long gain de la saison, et il a marqué dans trois de ses cinq matchs.
 
-"Pourquoi lui dimanche ?" me direz-vous. Parce que la défense des Titans a des failles : elle figure au 31e rang des défenses contre la passe (selon Draft Sharks). Si Tennessee se concentre sur Taylor et les receveurs extérieurs, Warren aura de l'espace au milieu. Et en red-zone, avec son gabarit, il est déjà devenu la solution préférée de Steichen.
+"Pourquoi lui dimanche ?" me direz-vous. Parce que la défense des Titans a des failles : elle figure au 31e rang des défenses contre la passe. Si Tennessee se concentre sur Taylor et les receveurs extérieurs, Warren aura de l'espace au milieu. Et en red-zone, avec son gabarit, il est déjà devenu la solution préférée de Steichen.
 
 Donc on lui donne rendez-vous dans l'en-but. Au moins une fois ;o)
 
