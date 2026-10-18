@@ -10,6 +10,9 @@ timezone: Europe/Paris
 # Adresse publique du site (utilisée pour le plan du site envoyé à Google)
 url: https://laruadebleue.github.io
 
+# Page Facebook (affichée en pied de page et sous chaque article)
+facebook_url: https://www.facebook.com/profile.php?id=61595169340546
+
 # Génère automatiquement sitemap.xml (la liste des pages pour Google)
 # et feed.xml (le flux RSS des articles, pour les publications automatiques)
 plugins:
