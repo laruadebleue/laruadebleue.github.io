@@ -18,6 +18,7 @@ facebook_url: https://www.facebook.com/profile.php?id=61595169340546
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-redirect-from
 
 # Adresse des articles : /2026/10/titre-de-l-article/
 permalink: /:year/:month/:title/
