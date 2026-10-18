@@ -349,6 +349,28 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
   font-style: italic;
 }
 
+/* Lien vers la Page Facebook */
+.fb-icon { width: 1.1em; height: 1.1em; flex-shrink: 0; }
+.follow { margin: 2.5rem 0 0; }
+.follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.1rem;
+  background: var(--blue-text);
+  color: var(--surface);
+  border-radius: 4px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+.follow-btn:hover { background: var(--blue); }
+.follow + .back { margin-top: 1.25rem; }
+
 .back { margin-top: 2.5rem; font-family: var(--font-label); font-weight: 600; letter-spacing: 0.04em; }
 
 /* ---------- Pied de page ---------- */
@@ -360,6 +382,8 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .footer-inner { padding-block: 1.75rem 2.5rem; display: grid; gap: 0.3rem; }
 .footer p { margin: 0; }
 .footer a { color: inherit; }
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+.footer-fb { display: inline-flex; align-items: center; gap: 0.35rem; }
 
 @media (max-width: 30rem) {
   .card-link { padding: 1.2rem 1.1rem; }
