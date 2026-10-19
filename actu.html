@@ -16,12 +16,12 @@ redirect_from: /saison-2026/
   {% assign m = post.date | date: "%-m" | minus: 1 %}
   <li class="card">
     <a class="card-link" href="{{ post.url | relative_url }}">
-      <p class="eyebrow">{% if post.semaine %}Semaine {{ post.semaine }} · {% endif %}{% if post.type == "avant-match" %}Avant-match · {% endif %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
+      <p class="eyebrow">{% if post.semaine %}Semaine {{ post.semaine }} · {% endif %}{% if post.type == "avant-match" %}Avant-match · {% elsif post.adversaire %}Récit de match · {% endif %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
       <h3 class="card-title">{{ post.title }}</h3>
       {% if post.type == "avant-match" %}
       <p class="card-score"><span class="card-score-num">{% if post.lieu == "domicile" %}{{ post.adversaire }} ({{ post.bilan_adversaire }}) @ Colts ({{ post.bilan_colts }}){% else %}Colts ({{ post.bilan_colts }}) @ {{ post.adversaire }} ({{ post.bilan_adversaire }}){% endif %}</span><span class="pill pill-avant">Avant-match</span></p>
       {% elsif post.adversaire %}
-      <p class="card-score"><span class="card-score-num">Colts {{ post.score_colts }} – {{ post.score_adversaire }} {{ post.adversaire }}</span>{% if post.score_colts > post.score_adversaire %}<span class="pill pill-victoire">Victoire</span>{% elsif post.score_colts < post.score_adversaire %}<span class="pill pill-defaite">Défaite</span>{% else %}<span class="pill pill-nul">Nul</span>{% endif %}</p>
+      <p class="card-score"><span class="card-score-num">{% if post.lieu == "domicile" %}{{ post.adversaire }} {{ post.score_adversaire }} – {{ post.score_colts }} Colts{% else %}Colts {{ post.score_colts }} – {{ post.score_adversaire }} {{ post.adversaire }}{% endif %}</span>{% if post.score_colts > post.score_adversaire %}<span class="pill pill-victoire">Victoire</span>{% elsif post.score_colts < post.score_adversaire %}<span class="pill pill-defaite">Défaite</span>{% else %}<span class="pill pill-nul">Nul</span>{% endif %}</p>
       {% endif %}
       {% if post.chapeau %}<p class="card-chapeau">{{ post.chapeau }}</p>{% endif %}
       <span class="card-more">Lire l'article →</span>
