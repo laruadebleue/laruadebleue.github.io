@@ -13,7 +13,7 @@ layout: default
     {% assign m = post.date | date: "%-m" | minus: 1 %}
     <li class="card">
       <a class="card-link" href="{{ post.url | relative_url }}">
-        <p class="eyebrow">{% if post.categories contains 'autour' %}Autour des Colts · {% elsif post.semaine %}Semaine {{ post.semaine }} · {% if post.type == "avant-match" %}Avant-match · {% elsif post.adversaire %}Récit de match · {% endif %}{% endif %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
+        <p class="eyebrow">{% if post.categories contains 'autour' %}{% if post.genre %}{{ post.genre }} · {% endif %}{% elsif post.semaine %}Semaine {{ post.semaine }} · {% if post.type == "avant-match" %}Avant-match · {% elsif post.adversaire %}Récit de match · {% endif %}{% endif %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
         <h3 class="card-title">{{ post.title }}</h3>
         {% if post.type == "avant-match" %}
         <p class="card-score"><span class="card-score-num">{% if post.lieu == "domicile" %}{{ post.adversaire }} ({{ post.bilan_adversaire }}) @ Colts ({{ post.bilan_colts }}){% else %}Colts ({{ post.bilan_colts }}) @ {{ post.adversaire }} ({{ post.bilan_adversaire }}){% endif %}</span><span class="pill pill-avant">Avant-match</span></p>
