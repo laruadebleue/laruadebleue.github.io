@@ -16,7 +16,7 @@ permalink: /autour-des-colts/
   {% assign m = post.date | date: "%-m" | minus: 1 %}
   <li class="card">
     <a class="card-link" href="{{ post.url | relative_url }}">
-      <p class="eyebrow">{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
+      <p class="eyebrow">{% if post.genre %}{{ post.genre }} · {% endif %}{{ post.date | date: "%-d" }} {{ mois[m] }} {{ post.date | date: "%Y" }}</p>
       <h3 class="card-title">{{ post.title }}</h3>
       {% if post.chapeau %}<p class="card-chapeau">{{ post.chapeau }}</p>{% endif %}
       <span class="card-more">Lire l'article →</span>
