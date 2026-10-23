@@ -14,7 +14,6 @@ layout: default
   <section class="scoreboard" aria-label="L'affiche">
     <div class="sb-head">
       <span>L'affiche</span>
-      {% if page.coup_envoi %}<span class="sb-result sb-avant">{{ page.coup_envoi }}</span>{% endif %}
     </div>
     {% if page.lieu == "domicile" %}
     <div class="sb-row"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.bilan_adversaire }}</span></div>
@@ -23,9 +22,10 @@ layout: default
     <div class="sb-row sb-winner"><span class="sb-team">Colts</span><span class="sb-score">{{ page.bilan_colts }}</span></div>
     <div class="sb-row"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.bilan_adversaire }}</span></div>
     {% endif %}
-    <div class="sb-foot">
-      <span>{% if page.stade %}{{ page.stade }}{% elsif page.lieu == "domicile" %}À Indianapolis{% else %}À {{ page.ville }}{% endif %}</span>
-      {% if page.division %}<span>{{ page.division }}</span>{% endif %}
+    <div class="sb-foot sb-foot-avant">
+      {% if page.stade %}<span>{{ page.stade }}</span>{% endif %}
+      {% if page.coup_envoi %}<span class="sb-result sb-avant">{{ page.coup_envoi }}</span>{% endif %}
+      <span>{% if page.lieu == "domicile" %}Indianapolis{% else %}{{ page.ville }}{% endif %}</span>
     </div>
   </section>
   {% elsif page.adversaire %}
@@ -36,15 +36,15 @@ layout: default
       <span class="sb-result sb-{{ classe }}">{{ resultat }}</span>
     </div>
     {% if page.lieu == "domicile" %}
-    <div class="sb-row{% if page.score_adversaire > page.score_colts %} sb-winner{% endif %}"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.score_adversaire }}</span></div>
-    <div class="sb-row sb-colts{% if page.score_colts > page.score_adversaire %} sb-winner{% endif %}"><span class="sb-team">Colts</span><span class="sb-score">{{ page.score_colts }}</span></div>
+    <div class="sb-row{% if page.score_adversaire > page.score_colts %} sb-winner{% endif %}"><span class="sb-team">{{ page.adversaire }}{% if page.bilan_adversaire %} <span class="sb-rec">({{ page.bilan_adversaire }})</span>{% endif %}</span><span class="sb-score">{{ page.score_adversaire }}</span></div>
+    <div class="sb-row sb-colts{% if page.score_colts > page.score_adversaire %} sb-winner{% endif %}"><span class="sb-team">Colts{% if page.bilan %} <span class="sb-rec">({{ page.bilan }})</span>{% endif %}</span><span class="sb-score">{{ page.score_colts }}</span></div>
     {% else %}
-    <div class="sb-row sb-colts{% if page.score_colts > page.score_adversaire %} sb-winner{% endif %}"><span class="sb-team">Colts</span><span class="sb-score">{{ page.score_colts }}</span></div>
-    <div class="sb-row{% if page.score_adversaire > page.score_colts %} sb-winner{% endif %}"><span class="sb-team">{{ page.adversaire }}</span><span class="sb-score">{{ page.score_adversaire }}</span></div>
+    <div class="sb-row sb-colts{% if page.score_colts > page.score_adversaire %} sb-winner{% endif %}"><span class="sb-team">Colts{% if page.bilan %} <span class="sb-rec">({{ page.bilan }})</span>{% endif %}</span><span class="sb-score">{{ page.score_colts }}</span></div>
+    <div class="sb-row{% if page.score_adversaire > page.score_colts %} sb-winner{% endif %}"><span class="sb-team">{{ page.adversaire }}{% if page.bilan_adversaire %} <span class="sb-rec">({{ page.bilan_adversaire }})</span>{% endif %}</span><span class="sb-score">{{ page.score_adversaire }}</span></div>
     {% endif %}
-    <div class="sb-foot">
-      <span>{% if page.lieu == "domicile" %}À Indianapolis{% else %}À {{ page.ville }}{% endif %}</span>
-      {% if page.bilan %}<span>Bilan {{ page.bilan }}</span>{% endif %}
+    <div class="sb-foot sb-foot-avant">
+      {% if page.stade %}<span>{{ page.stade }}</span><span aria-hidden="true">·</span>{% endif %}
+      <span>{% if page.lieu == "domicile" %}Indianapolis{% else %}{{ page.ville }}{% endif %}</span>
     </div>
   </section>
   {% endif %}

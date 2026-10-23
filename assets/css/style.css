@@ -307,6 +307,7 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .sb-defaite { background: var(--loss); }
 .sb-nul { background: var(--draw); }
 .sb-avant { background: rgba(255, 255, 255, 0.14); }
+.sb-foot-avant { justify-content: flex-start; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
 .sb-row {
   display: flex;
   justify-content: space-between;
@@ -317,8 +318,9 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
   line-height: 1.1;
   color: var(--board-dim);
 }
-.sb-team { font-size: 1.6rem; }
-.sb-score { font-size: 2.6rem; font-variant-numeric: tabular-nums; }
+.sb-team { font-size: 2.1rem; }
+.sb-score { font-size: 2.1rem; font-variant-numeric: tabular-nums; }
+.sb-rec { font-family: var(--font-label); font-weight: 600; font-size: 1rem; letter-spacing: 0.04em; vertical-align: 0.2em; }
 .sb-winner { color: var(--board-ink); }
 
 .chapeau {
@@ -416,8 +418,8 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 
 @media (max-width: 30rem) {
   .card-link { padding: 1.2rem 1.1rem; }
-  .sb-team { font-size: 1.35rem; }
-  .sb-score { font-size: 2.2rem; }
+  .sb-team { font-size: 1.8rem; }
+  .sb-score { font-size: 1.8rem; }
   .wordmark-accent { -webkit-text-stroke-width: 1.5px; }
 }
 
