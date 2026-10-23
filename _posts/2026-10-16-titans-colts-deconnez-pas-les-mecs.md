@@ -12,7 +12,6 @@ bilan_colts: "2-3"
 bilan_adversaire: "0-5"
 coup_envoi: "Dimanche · 19h"
 stade: Lucas Oil Stadium
-division: AFC Sud
 chapeau: "Les Titans débarquent à Indianapolis sans la moindre victoire et avec l'attaque la moins prolifique de la ligue. Sur le papier, il n'y a pas photo. Mais méfiance..."
 ---
 

@@ -8,9 +8,11 @@ semaine: 6
 adversaire: Titans
 ville: Indianapolis
 lieu: domicile
+stade: Lucas Oil Stadium
 score_colts: 20
 score_adversaire: 26
 bilan: "2-4"
+bilan_adversaire: "1-5"
 chapeau: "Ridicule, c'est le seul mot qui convienne. Devant à la pause avec un score de 13-0 et une sensation de contrôler le match, les Colts se ramassent en seconde période et encaissent une défaite qui va laisser des marques. 20-26 au tableau final, trois ballons perdus, six sacks, un punt contré : quelle soirée au Lucas Oil Stadium ! La saison semble déjà compromise, avec un bilan de 2-4 et une ribambelle de questionnements sur lesquels il serait grand temps de se pencher."
 ---
 

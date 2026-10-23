@@ -8,9 +8,11 @@ semaine: 5
 adversaire: Steelers
 ville: Pittsburgh
 lieu: exterieur
+stade: Acrisure Stadium
 score_colts: 22
 score_adversaire: 34
 bilan: "2-3"
+bilan_adversaire: "3-2"
 chapeau: "Beaucoup d'efforts, beaucoup de yards, et des incursions en red zone qui ressemblaient plus à du tourisme qu'à des invasions : à Pittsburgh, le score raconte assez bien la soirée."
 ---
 
