@@ -307,7 +307,7 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .sb-defaite { background: var(--loss); }
 .sb-nul { background: var(--draw); }
 .sb-avant { background: rgba(255, 255, 255, 0.14); }
-.sb-foot-avant { justify-content: flex-start; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+.sb-foot.sb-foot-avant { justify-content: flex-start; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
 .sb-row {
   display: flex;
   justify-content: space-between;
