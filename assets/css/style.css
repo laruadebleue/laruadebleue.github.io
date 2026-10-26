@@ -117,8 +117,8 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .wordmark {
   font-family: "Arvo", Rockwell, "Roboto Slab", Georgia, serif;
   font-weight: 700;
-  font-size: calc(var(--step-4) * 0.85);
-  line-height: 0.92;
+  font-size: min(calc(var(--step-4) * 0.85), 8.4vw, 4rem);
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: -0.035em;
   color: var(--band-ink);
@@ -128,7 +128,7 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
   gap: 0.22em;
   justify-self: start;
 }
-.wordmark-line { display: block; white-space: nowrap; }
+.wordmark-text { white-space: nowrap; }
 .wordmark .kern { letter-spacing: -0.075em; }
 .wordmark-logo {
   flex-shrink: 0;
