@@ -14,6 +14,47 @@
 <link rel="icon" href="{{ '/favicon.svg' | relative_url }}?v=3" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}?v=3">
 <link rel="alternate" type="application/atom+xml" title="La Ruade Bleue" href="{{ '/feed.xml' | relative_url }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ '/' | absolute_url }}#organisation",
+      "name": "{{ site.title }}",
+      "url": "{{ '/' | absolute_url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/img/logo-512.png' | absolute_url }}",
+        "width": 512,
+        "height": 512
+      }{% if site.facebook_url %},
+      "sameAs": [{{ site.facebook_url | jsonify }}]{% endif %}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ '/' | absolute_url }}#site",
+      "name": "{{ site.title }}",
+      "url": "{{ '/' | absolute_url }}",
+      "description": {{ site.tagline | jsonify }},
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "{{ '/' | absolute_url }}#organisation" }
+    }{% if page.layout == 'post' %},
+    {
+      "@type": "BlogPosting",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.chapeau | jsonify }},
+      "url": "{{ page.url | absolute_url }}",
+      "mainEntityOfPage": "{{ page.url | absolute_url }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "inLanguage": "fr-FR",
+      "author": { "@type": "Person", "name": {{ page.auteur | default: 'Ryder Lane' | jsonify }} },
+      "publisher": { "@id": "{{ '/' | absolute_url }}#organisation" },
+      "isPartOf": { "@id": "{{ '/' | absolute_url }}#site" }
+    }{% endif %}
+  ]
+}
+</script>
 </head>
 <body>
 <header class="masthead">
