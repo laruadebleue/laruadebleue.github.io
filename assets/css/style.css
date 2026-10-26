@@ -128,6 +128,7 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
   gap: 0.22em;
   justify-self: start;
 }
+.wordmark-line { display: block; white-space: nowrap; }
 .wordmark .kern { letter-spacing: -0.075em; }
 .wordmark-logo {
   flex-shrink: 0;
