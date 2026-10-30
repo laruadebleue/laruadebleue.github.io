@@ -40,13 +40,13 @@ La bonne nouvelle, c'est l'adversaire. Les Jaguars ne réussissent que 1,8 sack 
 
 ### Les receveurs : préparer l'après-Downs
 
-Downs devrait jouer dimanche, mais son départ est une question de jours. Avec 307 yards, il est le meilleur receveur de l'équipe, sans aucun touchdown. Sans lui et sans Alec Pierce, toujours sur la liste des blessés longue durée et loin d'un retour, il reste peu de monde. Keenan Allen a déjà pris plus de ballons que Downs lors des trois derniers matchs, avec des tracés plus courts. Laquon Treadwell tient le poste de Pierce, Anthony Gould, remis de sa commotion, a repris l'entraînement normalement, Darius Slayton et Deion Burks complètent le groupe.
+Downs devrait jouer dimanche, mais son départ est une question de jours. Avec 307 yards, il est le meilleur receveur de l'équipe, sans aucun touchdown. Sans lui et sans Alec Pierce, toujours sur la liste des blessés longue durée et loin d'un retour, il reste peu de monde. Keenan Allen a déjà pris plus de ballons que Downs lors des trois derniers matchs, avec des tracés plus courts. Laquon Treadwell tient le poste de Pierce, Anthony Gould, forfait à cause de sa commotion, manquera le match, Darius Slayton et Deion Burks complètent le groupe.
 
-La presse américaine décrit ce groupe comme le plus lent de la ligue. En face, on aura Travis Hunter, l'un des meilleurs cornerbacks du moment. On surveillera surtout qui le remplace dans le slot quand Downs n'est pas sur le terrain, et si Gould ou Burks récupèrent déjà du temps de jeu.
+La presse américaine décrit ce groupe comme le plus lent de la ligue. En face, on aura Travis Hunter, l'un des meilleurs cornerbacks du moment. On surveillera surtout qui le remplace dans le slot quand Downs n'est pas sur le terrain, et si Burks récupère déjà du temps de jeu.
 
 ### Tyler Warren, le retour qui changerait tout
 
-Warren a manqué les deux derniers matchs et s'est entraîné de façon limitée mercredi et jeudi : sa présence dimanche reste incertaine. Quand il est en forme, c'est la première cible de Jones. Son retour offrirait au quarterback une solution courte au milieu du terrain, exactement ce qu'il faut contre la pression, et potentiellement un renfort de plus pour soulager Farmer.
+Warren a manqué les deux derniers matchs et s'est entraîné de façon limitée mercredi et jeudi : il a été déclaré apte pour dimanche. Quand il est en forme, c'est la première cible de Jones. Son retour offrirait au quarterback une solution courte au milieu du terrain, exactement ce qu'il faut contre la pression, et potentiellement un renfort de plus pour soulager Farmer.
 
 ### Taylor, oui, mais pas tout seul
 
@@ -76,7 +76,7 @@ Les Colts peuvent rester dans le match si Taylor maintient l'attaque dans le bon
 - Moins de quatre sacks. Avec un rookie à gauche, ce serait déjà une petite victoire pour la ligne et pour le plan de jeu.
 - Warren sur le terrain, et utilisé comme une vraie première option, pas comme un figurant.
 - Un Taylor bien géré : moins de courses dans le mur, plus de ballons en mouvement, et quelques séries pour McGowan ou Giddens.
-- Des jeunes receveurs en vitrine. Si Downs doit partir, autant voir dès maintenant ce que valent Gould et Burks.
+- Des jeunes receveurs en vitrine. Si Downs doit partir, autant voir dès maintenant ce que vaut Burks.
 - Une équipe qui se bat jusqu'au bout. Dans une semaine très mouvementée, le « body language » au quatrième quart-temps nous donnera des indices quant à l'état du vestiaire et au crédit qu'il reste à Steichen.
 
 ## Le facteur X : Jalen Farmer
