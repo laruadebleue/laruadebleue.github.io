@@ -6,6 +6,23 @@ layout: default
   <p class="intro-text">Les Colts d'Indianapolis racontés en français, avec pour seule ambition de partager des récits de matchs, des infos, des avis sur l'actualité de notre équipe préférée.</p>
 </section>
 
+{% assign breves = site.breves | sort: "date" | reverse %}
+{% if breves.size > 0 %}
+<section class="breves-home" aria-labelledby="enbref">
+  <h2 class="section-label" id="enbref">En bref</h2>
+  <ol class="breves">
+    {% for breve in breves limit: 3 %}
+    {% assign m = breve.date | date: "%-m" | minus: 1 %}
+    <li class="breve">
+      <p class="eyebrow">{{ breve.date | date: "%-d" }} {{ mois[m] }} · {{ breve.date | date: "%-H" }}h{{ breve.date | date: "%M" }}</p>
+      <div class="breve-text">{{ breve.content | markdownify }}</div>
+    </li>
+    {% endfor %}
+  </ol>
+  <a class="card-more" href="{{ '/breves/' | relative_url }}">Toutes les brèves →</a>
+</section>
+{% endif %}
+
 <section class="list-section" aria-labelledby="derniers">
   <h2 class="section-label" id="derniers">Derniers articles</h2>
   <ol class="cards">

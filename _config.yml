@@ -25,5 +25,14 @@ permalink: /:year/:month/:title/
 
 markdown: kramdown
 
+# Brèves : petites infos sans page à elles, affichées dans la rubrique Brèves
+# et relayées en texte seul sur Facebook (flux breves.xml)
+collections:
+  breves:
+    output: false
+
+# Signe ajouté automatiquement au début de chaque brève envoyée sur Facebook (pas sur le site)
+signe_breve: "🔵⚪🔵"
+
 exclude:
   - README.md

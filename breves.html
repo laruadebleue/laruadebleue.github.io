@@ -1,0 +1,26 @@
+---
+layout: default
+title: Brèves
+permalink: /breves/
+---
+{% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+{% assign breves = site.breves | sort: "date" | reverse %}
+<section class="page-head">
+  <p class="eyebrow">Rubrique</p>
+  <h1 class="page-title">Brèves</h1>
+  <p class="page-lede">Les petites infos du jour sur les Colts, en quelques lignes.</p>
+</section>
+
+{% if breves.size > 0 %}
+<ol class="breves">
+  {% for breve in breves %}
+  {% assign m = breve.date | date: "%-m" | minus: 1 %}
+  <li class="breve" id="b{{ breve.date | date: '%Y%m%d%H%M' }}">
+    <p class="eyebrow">{{ breve.date | date: "%-d" }} {{ mois[m] }} {{ breve.date | date: "%Y" }} · {{ breve.date | date: "%-H" }}h{{ breve.date | date: "%M" }}</p>
+    <div class="breve-text">{{ breve.content | markdownify }}</div>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="empty">Les premières brèves arrivent bientôt.</p>
+{% endif %}
