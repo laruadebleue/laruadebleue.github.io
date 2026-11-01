@@ -11,7 +11,7 @@ layout: default
 <section class="breves-home" aria-labelledby="enbref">
   <h2 class="section-label" id="enbref">En bref</h2>
   <ol class="breves">
-    {% for breve in breves limit: 3 %}
+    {% for breve in breves limit: 1 %}
     {% assign m = breve.date | date: "%-m" | minus: 1 %}
     <li class="breve">
       <p class="eyebrow">{{ breve.date | date: "%-d" }} {{ mois[m] }} · {{ breve.date | date: "%-H" }}h{{ breve.date | date: "%M" }}</p>
