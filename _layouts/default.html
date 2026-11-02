@@ -85,6 +85,18 @@
     </nav>
   </div>
 </header>
+<script>
+  (function () {
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    var cur = nav.querySelector('[aria-current="page"]');
+    if (cur && cur.offsetLeft + cur.offsetWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - 16;
+    function fin() { nav.classList.toggle('nav-fin', nav.scrollLeft + nav.clientWidth >= nav.scrollWidth - 2); }
+    nav.addEventListener('scroll', fin, { passive: true });
+    window.addEventListener('resize', fin);
+    fin();
+  })();
+</script>
 
 <main class="wrap main">
 {{ content }}
