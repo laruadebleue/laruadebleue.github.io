@@ -6,6 +6,19 @@ layout: default
   <p class="intro-text">Les Colts d'Indianapolis racontés en français, avec pour seule ambition de partager des récits de matchs, des infos, des avis sur l'actualité de notre équipe préférée.</p>
 </section>
 
+{% assign jours = "dim.,lun.,mar.,mer.,jeu.,ven.,sam." | split: "," %}{% assign mois_c = "janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc." | split: "," %}
+{% assign bilan_saison = nil %}{% assign prochain = nil %}
+{% for m in site.data.saison2026 %}{% if m.repos != true %}
+  {% assign sc = m.score_colts %}{% assign bi = m.bilan %}
+  {% for p in site.categories.saison %}{% if p.semaine == m.semaine and p.score_colts %}{% assign sc = p.score_colts %}{% assign bi = p.bilan %}{% endif %}{% endfor %}
+  {% if sc == nil %}{% if prochain == nil %}{% assign prochain = m %}{% endif %}{% else %}{% assign bilan_saison = bi %}{% endif %}
+{% endif %}{% endfor %}
+<a class="saison-bandeau" href="{{ '/saison-2026/' | relative_url }}">
+  <span class="sb-l">Saison 2026{% if bilan_saison %} · Bilan {{ bilan_saison }}{% endif %}</span>
+  {% if prochain %}<span class="sb-p">Prochain match : {% if prochain.lieu == "domicile" %}vs{% else %}@{% endif %} {{ prochain.adversaire }}, <span class="nowrap">{% if prochain.date %}{% assign j = prochain.date | date: "%w" | plus: 0 %}{% assign mo = prochain.date | date: "%-m" | minus: 1 %}{{ jours[j] }}&nbsp;{{ prochain.date | date: "%-d" }}&nbsp;{{ mois_c[mo] }}{% if prochain.heure %}&nbsp;{{ prochain.heure }}{% endif %}{% else %}{{ prochain.date_texte }}{% endif %}</span></span>{% endif %}
+  <span class="sb-c">Calendrier complet →</span>
+</a>
+
 {% assign breves = site.breves | sort: "date" | reverse %}
 {% if breves.size > 0 %}
 <section class="breves-home" aria-labelledby="enbref">
@@ -26,7 +39,7 @@ layout: default
 <section class="list-section" aria-labelledby="derniers">
   <h2 class="section-label" id="derniers">Derniers articles</h2>
   <ol class="cards">
-    {% for post in site.posts limit: 10 %}
+    {% for post in site.posts limit: 3 %}
     {% assign m = post.date | date: "%-m" | minus: 1 %}
     <li class="card">
       <a class="card-link" href="{{ post.url | relative_url }}">
@@ -43,4 +56,5 @@ layout: default
     </li>
     {% endfor %}
   </ol>
+  <p class="plus-articles"><a class="card-more" href="{{ '/actu/' | relative_url }}">Tous les articles Actu →</a><a class="card-more" href="{{ '/autour-des-colts/' | relative_url }}">Autour des Colts →</a></p>
 </section>

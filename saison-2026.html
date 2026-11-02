@@ -1,0 +1,39 @@
+---
+layout: default
+title: Saison 2026
+permalink: /saison-2026/
+---
+{% assign jours = "dim.,lun.,mar.,mer.,jeu.,ven.,sam." | split: "," %}
+{% assign mois_c = "janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc." | split: "," %}
+<section class="page-head">
+  <p class="eyebrow">Actu</p>
+  <h1 class="page-title">Saison 2026</h1>
+  <p class="page-lede">Le calendrier des Colts, les résultats et le bilan semaine après semaine, avec les articles disponibles.</p>
+</section>
+
+<ol class="saison">
+  <li class="saison-tete" aria-hidden="true"><span>Sem.</span><span>Date</span><span>Match</span><span>Résultat</span><span>Bilan</span><span>Articles</span></li>
+  {% for m in site.data.saison2026 %}
+  {% if m.repos %}
+  <li class="match match-repos"><span class="m-sem">S{{ m.semaine }}</span><span class="m-repos">Semaine de repos</span></li>
+  {% else %}
+  {% assign recit = nil %}{% assign avant = nil %}
+  {% for p in site.categories.saison %}
+    {% if p.semaine == m.semaine %}
+      {% if p.type == "avant-match" %}{% assign avant = p %}{% elsif p.adversaire %}{% assign recit = p %}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if recit %}{% assign sc = recit.score_colts %}{% assign sa = recit.score_adversaire %}{% assign bi = recit.bilan %}{% else %}{% assign sc = m.score_colts %}{% assign sa = m.score_adversaire %}{% assign bi = m.bilan %}{% endif %}
+  <li class="match{% if sc == nil %} match-avenir{% endif %}">
+    <span class="m-sem">S{{ m.semaine }}</span>
+    <span class="m-date">{% if m.date %}{% assign j = m.date | date: "%w" | plus: 0 %}{% assign mo = m.date | date: "%-m" | minus: 1 %}{{ jours[j] }}&nbsp;{{ m.date | date: "%-d" }}&nbsp;{{ mois_c[mo] }}{% if m.heure %}&nbsp;{{ m.heure }}{% endif %}{% else %}{{ m.date_texte }}{% endif %}</span>
+    <span class="m-adv">{% if m.lieu == "domicile" %}<span class="m-lieu">vs</span>{% else %}<span class="m-lieu">@</span>{% endif %} {{ m.adversaire }}</span>
+    <span class="m-res">{% if sc == nil %}<span class="m-avenir">À venir</span>{% else %}{% if sc > sa %}<span class="pill pill-victoire">V</span>{% elsif sc < sa %}<span class="pill pill-defaite">D</span>{% else %}<span class="pill pill-nul">N</span>{% endif %} <span class="m-score">{{ sc }}-{{ sa }}</span>{% if m.prolongation %} <span class="m-prol">OT</span>{% endif %}{% endif %}</span>
+    <span class="m-bilan">{% if bi %}{{ bi }}{% endif %}</span>
+    <span class="m-art">{% if avant %}<a href="{{ avant.url | relative_url }}">Avant-match</a>{% endif %}{% if avant and recit %} · {% endif %}{% if recit %}<a href="{{ recit.url | relative_url }}">Récit</a>{% endif %}</span>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ol>
+
+<p class="back"><a href="{{ '/actu/' | relative_url }}">← Tous les articles de la rubrique Actu</a></p>
