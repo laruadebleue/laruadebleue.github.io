@@ -489,6 +489,24 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
   .suite-suiv { text-align: left; grid-column: auto; }
 }
 
+.nowrap { white-space: nowrap; }
+.card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+}
+.card-lecture {
+  margin-left: auto;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ---------- Pied de page ---------- */
 .footer {
   border-top: 1px solid var(--line);
