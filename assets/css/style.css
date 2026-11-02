@@ -536,9 +536,12 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .m-date { font-variant-numeric: tabular-nums; }
 .m-adv { font-family: var(--font-label); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
 .m-lieu { color: var(--muted); font-weight: 600; text-transform: none; margin-right: 0.15rem; }
-.m-res { display: flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
+.m-res { position: relative; display: flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
 .m-score { font-family: var(--font-label); font-weight: 700; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
-.m-prol { font-size: var(--step--1); color: var(--muted); }
+.m-prol { position: absolute; right: 100%; margin-right: 0.4rem; font-size: var(--step--1); color: var(--muted); }
+.m-prol:empty { display: none; }
+.m-score { min-width: 2.9rem; }
+.m-res .pill { display: inline-block; box-sizing: border-box; width: 1.55rem; padding-inline: 0; text-align: center; }
 .m-avenir { color: var(--muted); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.08em; }
 .m-bilan { font-variant-numeric: tabular-nums; }
 .m-art { font-size: var(--step--1); }
@@ -555,9 +558,9 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
   }
   .m-sem { grid-area: sem; align-self: start; padding-top: 0.15rem; }
   .m-adv { grid-area: adv; }
-  .m-res { grid-area: res; justify-self: end; }
+  .m-res { grid-area: res; justify-self: end; width: 5.1rem; justify-content: flex-start; }
   .m-date { grid-area: date; font-size: var(--step--1); color: var(--muted); }
-  .m-bilan { grid-area: bilan; justify-self: end; font-size: var(--step--1); color: var(--muted); }
+  .m-bilan { grid-area: bilan; justify-self: end; width: 5.1rem; box-sizing: border-box; padding-left: 0; font-size: var(--step--1); color: var(--muted); }
   .m-bilan:not(:empty)::before { content: "Bilan "; }
   .m-art { grid-area: art; }
   .m-art:empty::before { content: "\00a0"; }

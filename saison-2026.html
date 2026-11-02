@@ -28,7 +28,7 @@ permalink: /saison-2026/
     <span class="m-sem">S{{ m.semaine }}</span>
     <span class="m-date">{% if m.date %}{% assign j = m.date | date: "%w" | plus: 0 %}{% assign mo = m.date | date: "%-m" | minus: 1 %}{{ jours[j] }}&nbsp;{{ m.date | date: "%-d" }}&nbsp;{{ mois_c[mo] }}{% if m.heure %}&nbsp;{{ m.heure }}{% endif %}{% else %}{{ m.date_texte }}{% endif %}</span>
     <span class="m-adv">{% if m.lieu == "domicile" %}<span class="m-lieu">vs</span>{% else %}<span class="m-lieu">@</span>{% endif %} {{ m.adversaire }}</span>
-    <span class="m-res">{% if sc == nil %}<span class="m-avenir">À venir</span>{% else %}{% if sc > sa %}<span class="pill pill-victoire">V</span>{% elsif sc < sa %}<span class="pill pill-defaite">D</span>{% else %}<span class="pill pill-nul">N</span>{% endif %} <span class="m-score">{{ sc }}-{{ sa }}</span>{% if m.prolongation %} <span class="m-prol">OT</span>{% endif %}{% endif %}</span>
+    <span class="m-res">{% if sc == nil %}<span class="m-avenir">À venir</span>{% else %}<span class="m-prol">{% if m.prolongation %}OT{% endif %}</span><span class="m-score">{{ sc }}-{{ sa }}</span>{% if sc > sa %}<span class="pill pill-victoire">V</span>{% elsif sc < sa %}<span class="pill pill-defaite">D</span>{% else %}<span class="pill pill-nul">N</span>{% endif %}{% endif %}</span>
     <span class="m-bilan">{% if bi %}{{ bi }}{% endif %}</span>
     <span class="m-art">{% if avant %}<a href="{{ avant.url | relative_url }}">Avant-match</a>{% endif %}{% if avant and recit %} · {% endif %}{% if recit %}<a href="{{ recit.url | relative_url }}">Récit</a>{% endif %}</span>
   </li>
