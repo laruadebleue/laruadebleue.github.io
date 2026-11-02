@@ -55,6 +55,46 @@ layout: default
 {{ content }}
   </div>
 
+  {% comment %} Liens vers les autres articles : même match, puis précédent / suivant dans la rubrique {% endcomment %}
+  {% if page.categories contains 'autour' %}{% assign liste = site.categories.autour %}{% else %}{% assign liste = site.categories.saison %}{% endif %}
+  {% assign plus_recent = nil %}{% assign plus_ancien = nil %}{% assign trouve = false %}{% assign jumeau = nil %}{% assign jumeau_url = "" %}
+  {% for p in liste %}
+    {% if page.semaine and p.semaine == page.semaine and p.url != page.url %}{% assign jumeau = p %}{% assign jumeau_url = p.url %}{% endif %}
+  {% endfor %}
+  {% for p in liste %}
+    {% if p.url != jumeau_url %}
+      {% if trouve and plus_ancien == nil %}{% assign plus_ancien = p %}{% endif %}
+      {% if p.url == page.url %}{% assign trouve = true %}{% endif %}
+      {% if trouve == false %}{% assign plus_recent = p %}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if jumeau or plus_ancien or plus_recent %}
+  <nav class="suite" aria-label="À lire aussi">
+    {% if jumeau %}
+    <a class="suite-match" href="{{ jumeau.url | relative_url }}">
+      <span class="suite-label">Sur le même match · {% if jumeau.type == "avant-match" %}L'avant-match{% else %}Le récit{% endif %}</span>
+      <span class="suite-titre">{{ jumeau.title }}</span>
+    </a>
+    {% endif %}
+    {% if plus_ancien or plus_recent %}
+    <div class="suite-nav">
+      {% if plus_ancien %}
+      <a class="suite-prec" href="{{ plus_ancien.url | relative_url }}">
+        <span class="suite-label">← Article précédent</span>
+        <span class="suite-titre">{{ plus_ancien.title }}</span>
+      </a>
+      {% endif %}
+      {% if plus_recent %}
+      <a class="suite-suiv" href="{{ plus_recent.url | relative_url }}">
+        <span class="suite-label">Article suivant →</span>
+        <span class="suite-titre">{{ plus_recent.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </nav>
+  {% endif %}
+
   {% if site.facebook_url %}
   <p class="follow"><a class="follow-btn" href="{{ site.facebook_url }}" target="_blank" rel="noopener"><svg class="fb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>Suivre La Ruade Bleue sur Facebook</a></p>
   {% endif %}

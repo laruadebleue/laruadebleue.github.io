@@ -452,6 +452,43 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 
 .back { margin-top: 2.5rem; font-family: var(--font-label); font-weight: 600; letter-spacing: 0.04em; }
 
+/* ---------- À lire aussi (bas d'article) ---------- */
+.suite { margin-top: 2.75rem; display: grid; gap: 0.9rem; }
+.suite a {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.95rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+.suite a:hover { border-color: var(--blue); }
+.suite-match { border-left: 4px solid var(--blue) !important; }
+.suite-label {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-text);
+}
+.suite-titre {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.suite-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.suite-suiv { text-align: right; grid-column: 2; }
+@media (max-width: 560px) {
+  .suite-nav { grid-template-columns: 1fr; }
+  .suite-suiv { text-align: left; grid-column: auto; }
+}
+
 /* ---------- Pied de page ---------- */
 .footer {
   border-top: 1px solid var(--line);
