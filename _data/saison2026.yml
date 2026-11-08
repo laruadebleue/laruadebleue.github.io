@@ -72,6 +72,9 @@
   heure: "19h"
   lieu: domicile
   adversaire: Cowboys
+  score_colts: 23
+  score_adversaire: 27
+  bilan: "2-7"
 - semaine: 10
   date: 2026-11-15
   heure: "19h"
