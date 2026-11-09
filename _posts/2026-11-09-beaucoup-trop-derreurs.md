@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Beaucoup trop d'erreurs"
-date: 2026-11-09 14:00:00 +0100
+date: 2026-11-09 13:00:00 +0100
 auteur: Ryder Lane
 categories: [saison]
 semaine: 9
