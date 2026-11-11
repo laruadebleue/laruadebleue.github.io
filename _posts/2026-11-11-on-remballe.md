@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "On remballe"
-date: 2026-11-11 12:00:00 +0100
+date: 2026-11-11 11:30:00 +0100
 auteur: Ryder Lane
 categories: [saison]
 genre: Analyse
