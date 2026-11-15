@@ -80,6 +80,9 @@
   heure: "19h"
   lieu: domicile
   adversaire: Dolphins
+  score_colts: 24
+  score_adversaire: 22
+  bilan: "3-7"
 - semaine: 11
   date: 2026-11-20
   heure: "2h15"
