@@ -302,6 +302,45 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .breve-text p { margin: 0 0 0.6rem; }
 .breve:target { border-color: var(--blue); }
 .breves-home { margin-bottom: 2.5rem; display: grid; gap: 0.9rem; }
+
+/* Brèves plus anciennes : repliées, titre seul, on clique pour lire */
+.breves-anciennes-titre { margin: 2.5rem 0 0.9rem; }
+.breves-anciennes { gap: 0.5rem; }
+.breve-repliee { padding: 0; }
+.breve-repliee summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "date signe" "titre signe";
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 0.15rem;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+.breve-repliee summary::-webkit-details-marker { display: none; }
+.breve-repliee summary .eyebrow { grid-area: date; margin: 0; }
+.breve-titre {
+  grid-area: titre;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.breve-repliee summary::after {
+  grid-area: signe;
+  content: "+";
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--blue-text);
+}
+.breve-repliee details[open] summary::after { content: "–"; }
+.breve-repliee summary:hover .breve-titre { color: var(--blue-text); }
+.breve-repliee .breve-text { padding: 0 1.25rem 1rem; }
+
 .breves-home .section-label { margin: 0; }
 
 .pill {

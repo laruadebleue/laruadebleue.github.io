@@ -13,7 +13,7 @@ permalink: /breves/
 
 {% if breves.size > 0 %}
 <ol class="breves">
-  {% for breve in breves %}
+  {% for breve in breves limit: 3 %}
   {% assign m = breve.date | date: "%-m" | minus: 1 %}
   <li class="breve" id="b{{ breve.date | date: '%Y%m%d%H%M' }}">
     <p class="eyebrow">{{ breve.date | date: "%-d" }} {{ mois[m] }} {{ breve.date | date: "%Y" }} · {{ breve.date | date: "%-H" }}h{{ breve.date | date: "%M" }}</p>
@@ -21,6 +21,40 @@ permalink: /breves/
   </li>
   {% endfor %}
 </ol>
+
+{% if breves.size > 3 %}
+<h2 class="section-label breves-anciennes-titre">Brèves précédentes</h2>
+<ol class="breves breves-anciennes">
+  {% for breve in breves offset: 3 %}
+  {% assign m = breve.date | date: "%-m" | minus: 1 %}
+  {% assign html = breve.content | markdownify | strip %}
+  {% assign titre = html | split: "</p>" | first | remove_first: "<p>" | strip %}
+  {% capture premier %}<p>{{ titre }}</p>{% endcapture %}
+  {% assign corps = html | remove_first: premier | strip %}
+  <li class="breve breve-repliee" id="b{{ breve.date | date: '%Y%m%d%H%M' }}">
+    <details>
+      <summary>
+        <span class="eyebrow">{{ breve.date | date: "%-d" }} {{ mois[m] }} {{ breve.date | date: "%Y" }} · {{ breve.date | date: "%-H" }}h{{ breve.date | date: "%M" }}</span>
+        <span class="breve-titre">{{ titre }}</span>
+      </summary>
+      <div class="breve-text">{{ corps }}</div>
+    </details>
+  </li>
+  {% endfor %}
+</ol>
+<script>
+  /* Un lien vers une brève repliée (#b…) l'ouvre directement */
+  (function () {
+    function ouvrir() {
+      var li = location.hash && document.getElementById(location.hash.slice(1));
+      var d = li && li.querySelector('details');
+      if (d) d.open = true;
+    }
+    window.addEventListener('hashchange', ouvrir);
+    ouvrir();
+  })();
+</script>
+{% endif %}
 {% else %}
 <p class="empty">Les premières brèves arrivent bientôt.</p>
 {% endif %}
