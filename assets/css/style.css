@@ -303,6 +303,30 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-ra
 .breve:target { border-color: var(--blue); }
 .breves-home { margin-bottom: 2.5rem; display: grid; gap: 0.9rem; }
 
+/* Articles plus anciens (Actu, Autour des Colts) : réduits à la date et au titre */
+.cards-anciennes-titre { margin: 2.5rem 0 0.9rem; }
+.cards-anciennes { gap: 0.5rem; }
+.card-compacte .card-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "date fleche" "titre fleche";
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 0.15rem;
+  padding: 0.75rem 1.25rem;
+}
+.card-compacte .eyebrow { grid-area: date; margin: 0; }
+.card-compacte .card-title { grid-area: titre; margin: 0; font-size: 1.15rem; }
+.card-compacte .card-link::after {
+  grid-area: fleche;
+  content: "→";
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--blue-text);
+}
+
 /* Brèves plus anciennes : repliées, titre seul, on clique pour lire */
 .breves-anciennes-titre { margin: 2.5rem 0 0.9rem; }
 .breves-anciennes { gap: 0.5rem; }

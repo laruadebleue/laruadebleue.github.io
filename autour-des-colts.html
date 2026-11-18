@@ -12,7 +12,7 @@ permalink: /autour-des-colts/
 
 {% if site.categories.autour %}
 <ol class="cards">
-  {% for post in site.categories.autour %}
+  {% for post in site.categories.autour limit: 3 %}
   {% assign m = post.date | date: "%-m" | minus: 1 %}
   <li class="card">
     <a class="card-link" href="{{ post.url | relative_url }}">
@@ -24,6 +24,21 @@ permalink: /autour-des-colts/
   </li>
   {% endfor %}
 </ol>
+
+{% if site.categories.autour.size > 3 %}
+<h2 class="section-label cards-anciennes-titre">Articles précédents</h2>
+<ol class="cards cards-anciennes">
+  {% for post in site.categories.autour offset: 3 %}
+  {% assign m = post.date | date: "%-m" | minus: 1 %}
+  <li class="card card-compacte">
+    <a class="card-link" href="{{ post.url | relative_url }}">
+      <p class="eyebrow">{% if post.genre %}{{ post.genre }} · {% endif %}{{ post.date | date: "%-d" }}&nbsp;{{ mois[m] }}&nbsp;{{ post.date | date: "%Y" }}</p>
+      <h3 class="card-title">{{ post.title }}</h3>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}
 {% else %}
 <p class="empty">Les premiers articles arrivent bientôt.</p>
 {% endif %}

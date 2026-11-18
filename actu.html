@@ -12,7 +12,7 @@ permalink: /actu/
 </section>
 
 <ol class="cards">
-  {% for post in site.categories.saison %}
+  {% for post in site.categories.saison limit: 3 %}
   {% assign m = post.date | date: "%-m" | minus: 1 %}
   <li class="card">
     <a class="card-link" href="{{ post.url | relative_url }}">
@@ -29,3 +29,18 @@ permalink: /actu/
   </li>
   {% endfor %}
 </ol>
+
+{% if site.categories.saison.size > 3 %}
+<h2 class="section-label cards-anciennes-titre">Articles précédents</h2>
+<ol class="cards cards-anciennes">
+  {% for post in site.categories.saison offset: 3 %}
+  {% assign m = post.date | date: "%-m" | minus: 1 %}
+  <li class="card card-compacte">
+    <a class="card-link" href="{{ post.url | relative_url }}">
+      <p class="eyebrow">{% if post.semaine %}Semaine {{ post.semaine }} · {% elsif post.genre %}{{ post.genre }} · {% endif %}{% if post.type == "avant-match" %}Avant-match · {% elsif post.adversaire %}Récit de match · {% endif %}{{ post.date | date: "%-d" }}&nbsp;{{ mois[m] }}&nbsp;{{ post.date | date: "%Y" }}</p>
+      <h3 class="card-title">{{ post.title }}</h3>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}
