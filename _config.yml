@@ -31,7 +31,7 @@ collections:
   breves:
     output: false
 
-# Signe ajouté automatiquement au début de chaque brève envoyée sur Facebook (pas sur le site)
+# Signe ajouté automatiquement au début des posts Facebook, brèves (breves.xml) et articles (articles.xml), jamais sur le site
 signe_breve: "🔵⚪🔵"
 
 exclude:
