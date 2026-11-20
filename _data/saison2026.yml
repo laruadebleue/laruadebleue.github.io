@@ -88,6 +88,9 @@
   heure: "2h15"
   lieu: exterieur
   adversaire: Texans
+  score_colts: 3
+  score_adversaire: 26
+  bilan: "3-8"
 - semaine: 12
   date: 2026-11-29
   heure: "19h"
