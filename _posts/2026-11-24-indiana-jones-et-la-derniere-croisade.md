@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Indiana Jones et la dernière croisade"
+date: 2026-11-24 12:30:00 +0100
+auteur: Ryder Lane
+categories: [saison]
+genre: Analyse
+chapeau: "Dix jours après avoir refusé de l'échanger, les Colts ont coupé Daniel Jones au lendemain de la défaite 26-3 à Houston. Huit mois plus tôt, ils lui offraient le plus gros contrat de deux ans de l'histoire de la NFL, alors qu'il était encore en rééducation. Pourquoi maintenant, pourquoi de cette façon, et que reste-t-il du quarterback qui nous a fait rêver l'automne dernier ?"
+---
+
+<h2>Pourquoi maintenant ?</h2>
+<p>Jeudi soir à Houston, Daniel Jones a joué son dernier match sous le maillot des Colts : 12 passes réussies sur 27, 144 yards, une interception, et 3 petits points au tableau d'affichage. La presse a relevé un échange tendu avec Shane Steichen sur le bord du terrain, puis le coach l'a sorti à moins de 8 minutes de la fin pour lancer Anthony Richardson. Le lendemain, Steichen annonçait la nouvelle : Richardson sera titulaire contre les Giants, et Jones est libéré. La décision semble aussi soudaine que stupéfiante...</p>
+<p>Stupéfiante, oui, parce que dix jours plus tôt, à la date limite des échanges, les Colts avaient refusé de s'en séparer. Les Ravens proposaient un échange de choix de draft de milieu de tableau, qui aurait rapporté un choix à Indianapolis si Baltimore se qualifiait pour les playoffs. Refusé ! Les Vikings étaient intéressés eux aussi. En début de semaine, Steichen confirmait encore Jones comme titulaire à Houston. Et le vendredi, on le laisse partir pour rien.</p>
+<p>Trois raisons expliquent ce revirement selon moi.</p>
+<p><strong>Le terrain, évidemment.</strong> Sur onze matchs, Jones affiche 58,4 % de passes réussies, 1 974 yards, 7 touchdowns et 13 interceptions, le pire total de la ligue. Ajoutez trois fumbles perdus. Avec un QBR de 29,1, il était dernier des quarterbacks titulaires. Même la victoire contre Miami (24-22) s'était faite avec la pire évaluation de sa saison (41,5).</p>
+<p><strong>L'argent, toujours.</strong> C'est la raison la moins visible, et sans doute la plus décisive. Le contrat de Jones contient une garantie en cas de blessure pour 2027 : 6,5 millions de dollars de salaire et une prime de 4 millions. S'il s'était blessé d'ici la fin de la saison, même à l'entraînement, ces 10,5 millions devenaient dus. En le coupant maintenant, les Colts suppriment ce risque. Pro Football Talk n'a pas manqué de souligner l'ironie : un échange le 10 novembre aurait fait disparaître ce risque tout aussi bien… et aurait rapporté un choix de draft. Mais pourquoi mégoter sur 10 millions quand on en perd 35, me direz-vous ? Parce que ces 35,2 millions sont déjà dépensés : c'est la prime à la signature de 44 millions, versée en mars, qu'il ne reste plus qu'à passer en comptabilité. Coupé aujourd'hui ou en février, Jones les aurait coûtés de toute façon. Les 10,5 millions, eux, n'étaient pas encore sortis des caisses. Garder Jones comme remplaçant n'apportait plus rien, et faisait quand même courir ce risque.</p>
+<p><strong>La propriétaire, finalement.</strong> Selon Schefter et Ian Rapoport, c'est Carlie Irsay-Gordon qui a tranché, après une réunion avec Steichen. Stephen Holder (ESPN) le dit sans détour : seule la propriété pouvait prendre une décision pareille. Tom Pelissero ajoute qu'elle avait soutenu le choix de garder Jones, puis celui de le remplacer, et que le club avait « trop de respect » pour lui pour en faire un troisième quarterback cantonné à la practice squad. Steichen, lui, précise que Jones n'a pas demandé à partir, et parle d'une décision « dans l'intérêt des deux parties ». Pourquoi maintenant ? « C'est simplement là où nous en sommes dans notre saison », a-t-il ajouté...</p>
+<p>Sur le fond, la décision se défend. Sur la forme, elle résume l'automne un peu chaotique des Colts. On refuse un choix de draft le 10, on libère le mec gratuitement le 20. Cherchez l'erreur !</p>
+<h2>Le parcours d'Indiana Jones</h2>
+<h3>Mars 2025 : un pari à 14 millions</h3>
+<p>Quand il arrive à Indianapolis, Daniel Jones est un quarterback à relancer. Choisi en 6e position par les Giants en 2019, il a été mis sur le banc en novembre 2024 au profit de Tommy DeVito, troisième quarterback de l'équipe, puis a demandé à être libéré. Quelques semaines dans l'équipe d'entraînement des Vikings, et en mars 2025, il choisit les Colts plutôt que Minnesota : un an, 14 millions de dollars, et une vraie chance d'être titulaire. Chris Ballard annonce une concurrence ouverte avec Anthony Richardson. Jones convainc et remporte le poste pendant le camp d'entraînement.</p>
+<h3>L'automne où tout semblait possible</h3>
+<p>La suite, on s'en souvient tous. Huit victoires, deux défaites à la semaine de repos, une attaque considérée comme la meilleure de la NFL, et un Jones qui s'invite dans la conversation pour le titre de MVP. Il est précis, il protège le ballon, il fait douter les défenses. Sur ses treize matchs de 2025 : 68 % de passes réussies, 3 101 yards, 19 touchdowns, 8 interceptions, une évaluation de 100,2. Le surnom « Indiana Jones » n'est plus une blague.</p>
+<h3>Un péroné, puis un tendon</h3>
+<p>Et puis le corps en surchauffe a fini par lâcher, en deux temps. Avant le match contre les Chiefs, en semaine 12, Jones se fracture le péroné gauche. Il joue quand même, contre Kansas City, contre Houston, puis à Jacksonville. Le 7 décembre, dès le premier quart-temps, son tendon d'Achille droit cède, sans aucun contact. On le revoit frapper son casque au sol de rage. Les Colts sont à 8-5. Ils ne gagneront plus un seul match et termineront à 8-9, hors des playoffs.</p>
+<h3>2026 : la rechute</h3>
+<p>Jones est revenu pour la semaine 1, huit mois et demi après la blessure. Une performance en soi. Mais ce n'était plus le même joueur. Les chiffres de cette saison parlent d'eux-mêmes, et le contexte n'a pas aidé : Alec Pierce blessé dès la semaine 2, Ballard renvoyé en octobre, Nelson, Buckner, Allen et Downs échangés, une ligne offensive rafistolée. Jones n'a jamais eu les armes de 2025. Mais il n'a jamais non plus retrouvé la justesse qui avait fait sa force. À Houston, après le match, il disait simplement : « Je suis le quarterback, donc je suis responsable. Je dois mieux jouer, je le sais. »</p>
+<h2>Un chèque signé sur une jambe</h2>
+<p>Le 3 mars 2026, les Colts posent le transition tag sur Jones : un an garanti à 37,8 millions de dollars, avec la possibilité d'égaler toute offre d'une autre équipe. Huit jours plus tard, ils vont beaucoup plus loin : deux ans, 88 millions de dollars (jusqu'à 100 millions avec les bonus), le plus gros contrat de deux ans de l'histoire de la NFL. 50 millions garantis à la signature, 60 millions en cas de blessure.</p>
+<p>À ce moment-là, Jones est en pleine rééducation. NFL.com jugeait même probable qu'il manque le début de saison. Autrement dit, les Colts ont pris sur eux tout le risque médical : si le tendon n'avait pas tenu, ils payaient quand même. Pour étaler la note, Ballard a réparti la prime à la signature de 44 millions sur cinq saisons, dont trois années fictives (8,8 millions par an). Une facilité comptable qui revient aujourd'hui comme un boomerang.</p>
+<div class="tableau-wrap">
+<table class="tableau">
+<thead>
+<tr><th scope="col">L'addition</th><th scope="col">Montant</th></tr>
+</thead>
+<tbody>
+<tr><td data-l="L'addition">Versé à Jones en 2026 (11 matchs)</td><td data-l="Montant">environ 49,8 M$</td></tr>
+<tr><td data-l="L'addition">Dead-cap en 2026</td><td data-l="Montant">14,9 M$</td></tr>
+<tr><td data-l="L'addition">Dead-cap en 2027</td><td data-l="Montant">35,2 M$</td></tr>
+<tr><td data-l="L'addition">Économie sur la masse salariale 2027 (46,8 M$ prévus, moins les 35,2 M$ de dead-cap)</td><td data-l="Montant">environ 11,6 M$</td></tr>
+<tr><td data-l="L'addition">Pour comparer : le transition tag, sur un an</td><td data-l="Montant">37,8 M$, et rien après</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ce qui frappe, c'est que le pari médical a été gagné : Jones était bien là en semaine 1. C'est le pari sportif qui a été perdu. C'est là que le choix du contrat pose question. Conserver Jones après sa première moitié de saison 2025 était logique. Mais avec le tag, les Colts misaient sur un an, sans rien traîner derrière. Avec la prolongation, ils ont payé plus cher en 2026 et se retrouvent avec 35,2 millions de dead-cap en 2027. Tout ça pour un quarterback de 29 ans qui sortait d'une fracture du péroné et d'une rupture du tendon d'Achille. Ce contrat restera dans les annales de la NFL... Merci Ballard !</p>
+<h2>Et maintenant ?</h2>
+<p>Comme prévu, aucune équipe n'a réclamé Jones sur la liste des waivers lundi soir. Le reprendre, c'était hériter de son contrat : environ 2 millions pour la fin de saison, 38 millions non garantis en 2027, dont au moins 10,5 millions dus à cause de la garantie blessure. Le voilà agent libre. L'équipe qui le signera ne lui versera que le salaire minimum, les Colts payant le reste. Les Ravens, les Patriots et les Cardinals devraient au moins se renseigner. Mais selon Schefter et Rapoport, Jones n'est pas pressé. Il attendrait qu'un quarterback d'une équipe en course pour les playoffs se blesse, pour être le premier appelé.</p>
+<p>À Indianapolis, Anthony Richardson prend les commandes pour les six derniers matchs, avec Riley Leonard comme seul autre quarterback dans l'effectif. Steichen a annoncé que le club cherchait à en signer un troisième. Premier rendez-vous dimanche… contre les Giants, l'équipe qui avait choisi Jones en 2019. C'est de l'humour ?</p>
+<h2>Le mot de la fin</h2>
+<p>On pourrait retenir les 13 interceptions, l'argent dépensé, la fin en eau de boudin. Je préfère retenir autre chose.</p>
+<p>Daniel Jones est arrivé dans l'Indiana comme un joueur dont New York ne voulait plus, avec un contrat d'un an et rien à perdre. En dix matchs, il a rendu cette équipe excitante à regarder, ce qui ne nous était pas arrivé depuis Andrew Luck. Il a joué avec un péroné cassé parce que l'équipe en avait besoin. Il n'a jamais chargé un coéquipier, jamais accusé le coaching, jamais réclamé de transfert. Le soir de son dernier match, il a pris la faute pour lui. « On ne dira jamais assez de bien de Daniel », disait Steichen la veille de son départ.</p>
+<p>On a pu lire, ces dernières semaines, pas mal de fans mécontents ou d'analystes bas de plafond le vilipender, voire l'insulter. Ça a empiré après la défaite contre Houston... Je trouve cela injuste.</p>
+<p>Il paie son inconstance, c'est vrai. À New York comme à Indianapolis, ses meilleures saisons ont été suivies de chutes brutales. Il paie sans doute aussi sa discrétion. Jones n'est pas un leader qui fait du bruit, et dans une saison qui coule, on attend du quarterback qu'il hausse le ton. Ce n'est pas son genre. Avec un contrat à 88 M$, il aurait très bien pu faire pencher la balance vers un renvoi de Steichen avant celui de Ballard. Il ne l'a pas fait... et je pense qu'il n'y a même pas songé.</p>
+<p>L'automne 2025, c'est lui. Et ça, personne ne pourra le lui reprendre. Bonne route, Indiana Jones ;o)</p>
+<p><strong>Go Indy !</strong></p>
